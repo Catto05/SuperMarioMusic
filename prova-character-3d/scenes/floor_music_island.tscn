@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvtvjnugkwd8g"]
+
+[ext_resource type="Shader" uid="uid://q6gofscrlamo" path="res://assets/shaders/dance_floor.gdshader" id="1_enu8d"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o205r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_enu8d"]
+render_priority = 0
+shader = ExtResource("1_enu8d")
+shader_parameter/grid_size = 61.750002885625
+shader_parameter/tile_speed = 2.0
+shader_parameter/color1 = Color(1, 0, 0.8, 1)
+shader_parameter/color2 = Color(6.930828e-06, 0.59003806, 0.86670446, 1)
+shader_parameter/color3 = Color(0.80214655, 0.7536905, 0.53466564, 1)
+shader_parameter/emission_strength = 2.166000102885
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o205r"]
+size = Vector3(1.9923935, 0.001, 1.9965653)
+
+[node name="floor" type="StaticBody3D"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_o205r")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_enu8d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003162384, -0.00022196944, -0.0019175243)
+shape = SubResource("BoxShape3D_o205r")

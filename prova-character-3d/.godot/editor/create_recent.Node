@@ -1,0 +1,15 @@
+Marker3D
+VBoxContainer
+BoxContainer
+Label
+ColorRect
+CanvasLayer
+Button
+TextureRect
+CollisionShape3D
+Area3D
+CharacterBody3D
+GPUParticles3D
+MeshInstance3D
+AnimatableBody3D
+StaticBody3D

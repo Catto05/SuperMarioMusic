@@ -1,0 +1,36 @@
+[gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://bvnb7dtljdktf"]
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_k74ja"]
+parameter_name = "noise_map"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_o12c5"]
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_ha0wf"]
+parameter_name = "ground_color"
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_onvyq"]
+parameter_name = "grass_color"
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_gka55"]
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(1, 1, 1), 2, Vector3(0.5, 0.5, 0.5)]
+op_type = 3
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+"
+nodes/vertex/0/position = Vector2(980, 60)
+nodes/vertex/2/node = SubResource("VisualShaderNodeTexture2DParameter_k74ja")
+nodes/vertex/2/position = Vector2(-440, 140)
+nodes/vertex/3/node = SubResource("VisualShaderNodeTexture_o12c5")
+nodes/vertex/3/position = Vector2(-58.07766, 331.3415)
+nodes/vertex/4/node = SubResource("VisualShaderNodeColorParameter_ha0wf")
+nodes/vertex/4/position = Vector2(53.04504, 1572.2997)
+nodes/vertex/5/node = SubResource("VisualShaderNodeColorParameter_onvyq")
+nodes/vertex/5/position = Vector2(740, 1440)
+nodes/vertex/6/node = SubResource("VisualShaderNodeMix_gka55")
+nodes/vertex/6/position = Vector2(-360, 1160)
+nodes/vertex/connections = PackedInt32Array(2, 0, 3, 2)
