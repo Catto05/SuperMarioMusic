@@ -8,19 +8,23 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="prova_character 3d"
 run/main_scene="uid://rwukj7r6mk8c"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Shaker="*res://addons/shaker/src/Shaker.gd"
-Conductor="*res://addons/conductor/condcutor.gd"
+Shaker="*uid://dnu2alwsuy052"
+Conductor="*uid://c5rvmkaorxynb"
 GameManager="*res://scripts/game_manager.gd"
-PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+PhantomCameraManager="*uid://duq6jhf6unyis"
 
 [display]
 
@@ -29,7 +33,7 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/conductor/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/conductor/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [filesystem]
 

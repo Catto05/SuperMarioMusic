@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://bvnb7dtljdktf"]
+[gd_resource type="VisualShader" format=3 uid="uid://bvnb7dtljdktf"]
 
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_k74ja"]
 parameter_name = "noise_map"
@@ -16,12 +16,6 @@ default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(1, 1, 1), 2, Vector3(0.5
 op_type = 3
 
 [resource]
-code = "shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
-
-
-
-"
 nodes/vertex/0/position = Vector2(980, 60)
 nodes/vertex/2/node = SubResource("VisualShaderNodeTexture2DParameter_k74ja")
 nodes/vertex/2/position = Vector2(-440, 140)

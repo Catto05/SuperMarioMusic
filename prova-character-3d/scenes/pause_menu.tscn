@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://biqx3ndg0ncrx"]
+[gd_scene format=3 uid="uid://biqx3ndg0ncrx"]
 
 [ext_resource type="Script" uid="uid://du3swyyumpqvo" path="res://scripts/pause_menu.gd" id="1_kukqi"]
 [ext_resource type="Texture2D" uid="uid://cfw2je21dd4qw" path="res://assets/images/resume.png" id="3_v4r4p"]
 [ext_resource type="Texture2D" uid="uid://dvcekqo0i4ytq" path="res://assets/images/quit.png" id="4_1s2dm"]
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="Control" unique_id=1857750923]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kukqi")
 
-[node name="TextureRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="ColorRect" parent="." unique_id=949959565]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.22658296, 0.22658296, 0.22658296, 0.65800005)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2007550267]
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -36,14 +36,14 @@ offset_bottom = -212.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="resume" type="Button" parent="VBoxContainer"]
+[node name="resume" type="Button" parent="VBoxContainer" unique_id=1039710220]
 custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
 icon = ExtResource("3_v4r4p")
 icon_alignment = 1
 expand_icon = true
 
-[node name="quit" type="Button" parent="VBoxContainer"]
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1524913436]
 custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
 icon = ExtResource("4_1s2dm")
